@@ -1,0 +1,142 @@
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile colspan="2">
+
+<img src="https://www.carspotpanama.com/wp-content/uploads/2020/07/Artes-de-banner-web-ofertas-feria-2020.jpg" alt="" style="object-fit: contain; width: 90%; height:90%;">
+
+    </mat-grid-tile>
+    <mat-grid-tile> 
+        <img src="        https://www.carspotpanama.com/wp-content/uploads/2019/09/car.jpg
+        " alt="" style="object-fit: contain; width: 50%; height:50%;">
+
+
+        <p> Contamos un vasto inventario con vehículos para todo tipo de presupuesto. </p>
+
+
+    </mat-grid-tile>
+
+
+    <mat-grid-tile>
+        <img src="        https://www.carspotpanama.com/wp-content/uploads/2018/09/tramite-127x127.png
+        " alt="" style="object-fit: contain; width: 50%; height:50%;">
+       <br> <br/>
+        <p> Presenta los documentos solicitados y conseguiremos el financiamiento que usted necesita para su carro.</p>
+
+
+
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+
+
+<div class="container" *ngIf="posts$ | async as posts ; else loading" >   
+  
+    <mat-card class="post-card" *ngFor="let post of posts">
+        <mat-card-header>
+            <mat-card-title>
+                <a [routerLink]="['/post',post.id]">
+                    {{post.titlePost}}
+                   
+          
+                </a>
+            
+            </mat-card-title>
+           
+        </mat-card-header>
+        <a [routerLink]="['/post',post.id]">
+        <img matCardImage [src]= "post.imagePost">
+        
+        <p >
+            {{post.contentPost}}
+         
+           </p>
+        </a>
+           
+        <mat-card-content>
+         
+        </mat-card-content>
+        
+        <mat-divider>
+
+            
+        </mat-divider>
+    
+        <mat-card-actions>
+
+            <mat-chip-list>
+<a [routerLink]="['/post',post.id]">
+<mat-chip  *ngFor="let tag of post.tagsPost" [ngClass]="tag" >
+    {{ tag }}
+</mat-chip>
+</a>
+            </mat-chip-list>
+        </mat-card-actions>
+ 
+      
+    </mat-card>
+    </div>
+
+
+
+
+
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile colspan="2">
+    
+            <h1>PORQUE ALQUILAR  CON    ARRENDADORA LA ESTAFA   </h1>   
+        </mat-grid-tile>
+        <mat-grid-tile> 
+            <img src="        https://www.carspotpanama.com/wp-content/uploads/2018/09/icon1-127x127.png
+            " alt="" style="object-fit: contain; width: 50%; height:50%;">
+    
+    
+            <p> TU ERES LO MAS IMPORTANTE <br> <br/>
+
+                Estamos atentos a tus necesidades y te ayudaremos a encontrar el carro perfecto para ti. </p>
+    
+    
+        </mat-grid-tile>
+    
+    
+        <mat-grid-tile>
+            <img src="       https://www.carspotpanama.com/wp-content/uploads/2018/09/icon2-127x127.png
+            " alt="" style="object-fit: contain; width: 50%; height:50%;">
+           
+            <p>SIN COMPLICACIONES<br> <br/>
+
+                Con excelentes precios y financiamiento rápido tener carro con Carspot es fácil..</p>
+    
+    
+    
+        </mat-grid-tile>
+      </mat-grid-list>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ng-template #loading>
+<div class="container-spinner" >
+    <mat-spinner></mat-spinner>
+    </div>
+        </ng-template>
+    
+    

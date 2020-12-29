@@ -1,0 +1,129 @@
+<div class="container" *ngIf="post$ | async as post ; else loading">    
+    <mat-card class="post-card" >
+      
+        <img matCardImage class="align-center"[src]= "post.imagePost">
+        <mat-card-content>
+        
+                <mat-card-title>
+                    
+                        {{post.titlePost}}
+                       
+              
+                  
+                </mat-card-title>
+        
+           <p class="content">
+            {{post.contentPost}}
+         
+           </p>  
+
+         
+           <p>
+            <mat-form-field appearance="legacy" class="align-izq">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>ingrese su Nombre</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard" class="align-izq">
+              <mat-label>apellido</mat-label>
+              <input matInput placeholder="">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Ingrese su apellido</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="fill" class="align-izq" >
+              <mat-label>Telefono</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Ingrese su numero de telefono</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline" class="align-izq" >
+              <mat-label>direccion</mat-label>
+              <input matInput placeholder="">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>ingrese su direccion </mat-hint>
+            </mat-form-field>
+          </p>
+
+          <p>
+
+
+   
+       
+
+
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+          <button mat-button (click)="showModal()">Enviar datos !
+
+
+
+            
+
+          </button>
+
+
+         
+
+
+
+
+          
+       
+          
+        </mat-card-content>
+
+        
+      
+
+
+
+        
+    </mat-card>
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+
+
+
+
+
+ 
+
+
+
+    
+    <ng-template #loading>
+        <div class="container-spinner" >
+            <mat-spinner></mat-spinner>
+            </div>
+                </ng-template>
+    
