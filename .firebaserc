@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "arrendadora-la-estafa": {
+      "hosting": {
+        "rentautos1": [
+          "arrendadora-la-estafa"
+        ]
+      }
+    }
+  }
+}
