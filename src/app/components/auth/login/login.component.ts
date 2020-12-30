@@ -3,7 +3,6 @@ import { AuthService } from '../../../shared/services/auth.service';
 import { UserI } from '../../../shared/models/user.interface';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authSvc: AuthService, private router: Router) { }
+  constructor(private authSvc: AuthService, private router: Router,    private authService: AuthService) { }
 
 loginForm =new FormGroup({
 email: new FormControl('',Validators.required),
@@ -22,6 +21,8 @@ password: new FormControl('',Validators.required)
 
   ngOnInit(): void {
   }
+
+
 
 
   onLogin(form:UserI){

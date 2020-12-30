@@ -1,8 +1,8 @@
-<mat-toolbar  color="primary" >
+<mat-toolbar  color="primary"  >
     <a routerLink="/">{{ appName }}</a>
     <span class="fill-remaining-space"></span>
     <a routerLink="/admin" routerLinkActive="active" *ngIf="authSvc.userData$ | async">
-      <button mat-button>Admin</button>
+      <button mat-button>Perfil</button>
     </a>
   
     <a routerLink="/about" routerLinkActive="active">
@@ -19,3 +19,5 @@
       </a>
     </ng-template>
   </mat-toolbar> 
+  <jjva-ngx-whatsapp-button [ngx_whatsapp_phone]="phone" [ngx_whatsapp_text]="title"></jjva-ngx-whatsapp-button>
+  

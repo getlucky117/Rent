@@ -27,8 +27,8 @@ this.post$ = this.postSvc.getOnePost(idPost);
 showModal(){
 
   Swal.fire(
-    'Tus datos',
-    'han sido guardados correctamente',
+    'Tu Reserva',
+    'han sido guardada correctamente',
     'success'
   )
 

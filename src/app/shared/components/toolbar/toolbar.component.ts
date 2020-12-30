@@ -10,6 +10,12 @@ export class ToolbarComponent implements OnInit {
 appName= 'Arrendadora La Estafa';
   constructor(public authSvc:AuthService) { }
 
+
+  public phone = '[+50763286365]'
+  public title = "Busco alquilar un auto";
+
+
+
   ngOnInit(): void {
   }
 
@@ -21,6 +27,7 @@ this.authSvc.logout();
 
 
 }
+
 
 
 }
