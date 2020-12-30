@@ -17,6 +17,20 @@
          
            </p>  
 
+
+
+
+           <p  class="content"    >
+             
+            Marca/Modelo   {{post.marca}}  
+           </p>
+
+
+
+
+<h1> a solo   {{post.precio}} $ diarios </h1>
+          
+
          
            <p>
             <mat-form-field appearance="legacy" class="align-izq">
@@ -57,20 +71,31 @@
    
        
 
+   
+       
+
+ 
+            <mat-form-field color="accent" appearance="fill" lass="align-izq"  >
+              <mat-label>Fecha de check in</mat-label>
+              <input matInput [matDatepicker]="picker1">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+            
+            <mat-form-field color="accent" appearance="fill" lass="align-izq"  >
+              <mat-label>Fecha de check out</mat-label>
+              <input matInput [matDatepicker]="picker2">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2 color="primary"></mat-datepicker>
+            </mat-form-field>
+         
+
 
           </p>
+       
 
 
-
-
-
-
-
-
-
-
-
-          <button mat-button (click)="showModal()">Enviar datos !
+          <button mat-button (click)="showModal()">Solicitar reserva !
 
 
 
@@ -79,13 +104,11 @@
           </button>
 
 
-         
-
-
-
-
+        
           
-       
+
+
+
           
         </mat-card-content>
 

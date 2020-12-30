@@ -6,18 +6,35 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
 import { FileI } from '../models/file.interface';
 
+
+
+
+
+
+
+
+
+
+
+
+
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
 
-  public userData$: Observable<firebase. User>;
+
+
+export class AuthService {
+  
+
+  public userData$: Observable<firebase.  User>;
   private filePath: string;
  
-  constructor(private afAuth: AngularFireAuth , private storage: AngularFireStorage) { 
+  constructor(private afAuth: AngularFireAuth , private storage: AngularFireStorage,    private Auth: AngularFireAuth) { 
 
     this.userData$ = afAuth.authState;
   }
+
 
 
 //loginByEmail(UserI){
@@ -66,7 +83,6 @@ private uploadImage(user: UserI, image: FileI): void {
       })
     ).subscribe();
 }
-
 
 
 
