@@ -1,0 +1,3 @@
+debido a una incompatibilidad  entre el angular y la version de firebase utilisada puede aparecer este error Error: src/app/shared/services/auth.service.ts:30:43 - error TS2694: Namespace '"C:/Users/Gilberto/rentautos1/node_modules/firebase/index"' has no exported member 'User'.
+30   public userData$: Observable<firebase.  User>; la solucion  a este error de compatibilidad es ir a  src/app/shared/services/auth.service.ts:30:43 y realizar un leve cambio 
+como un espacio luego guardar y listo 
